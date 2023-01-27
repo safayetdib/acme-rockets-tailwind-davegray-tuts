@@ -7,6 +7,8 @@
 		<title>Acme Rockets</title>
 		<!-- CSS -->
 		<link rel="stylesheet" href="/build/css/style.css" />
+		<!-- JS -->
+		<script src="js/main.js" defer></script>
 	</head>
 	<body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
 		<!-- NAVBAR -->
@@ -17,16 +19,41 @@
 				</h1>
 				<div>
 					<button
-						id="mobile-open-button"
-						class="text-3xl focus:outline-none sm:hidden">
-						&#9776;
+						id="hamburger-button"
+						class="relative h-8 w-8 cursor-pointer text-3xl md:hidden">
+						<!-- &#9776; -->
+						<div
+							class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-y-3 before:-translate-x-4 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:translate-y-3 after:-translate-x-4 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']"></div>
 					</button>
-					<nav class="hidden space-x-8 text-xl sm:block" aria-label="main">
+					<nav class="hidden space-x-8 text-xl md:block" aria-label="main">
 						<a href="#rockets" class="hover:opacity-90">Our Rockets</a>
 						<a href="#testimonials" class="hover:opacity-90">Testimonials</a>
 						<a href="#contact" class="hover:opacity-90">Contact Us</a>
 					</nav>
 				</div>
+			</section>
+			<section
+				id="mobile-menu"
+				class="top-68 absolute hidden w-full origin-top animate-open-menu flex-col justify-center bg-black text-5xl">
+				<!-- <button class="self-end px-6 text-8xl">
+					&times;
+				</button> -->
+				<nav
+					class="flex min-h-screen flex-col items-center py-8"
+					aria-label="mobile">
+					<a href="#hero" class="hover: w-full py-6 text-center opacity-90"
+						>Home</a
+					>
+					<a href="#rockets" class="hover: w-full py-6 text-center opacity-90"
+						>Our Rockets</a
+					>
+					<a href="#contact" class="hover: w-full py-6 text-center opacity-90"
+						>Contact Us</a
+					>
+					<a href="#footer" class="hover: w-full py-6 text-center opacity-90"
+						>Legal</a
+					>
+				</nav>
 			</section>
 		</header>
 
@@ -34,7 +61,7 @@
 			<!-- HERO SECTION -->
 			<section
 				id="hero"
-				class="mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row">
+				class="widescreen:section-min-height tallscreen:section-min-height mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row">
 				<article class="sm:w-1/2">
 					<h2
 						class="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
@@ -59,7 +86,9 @@
 			<hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
 			<!-- OUR ROCKETS -->
-			<section id="rockets" class="my-12 scroll-mt-20 p-6">
+			<section
+				id="rockets"
+				class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
 				<h2
 					class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
 					Our Rockets
@@ -125,7 +154,9 @@
 			<hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
 			<!-- TESTIMONIALS -->
-			<section id="testimonials" class="my-12 scroll-mt-20 p-6">
+			<section
+				id="testimonials"
+				class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
 				<h2
 					class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
 					Testimonials
@@ -184,7 +215,9 @@
 			<hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
 			<!-- CONTACT -->
-			<section id="contact" class="my-12 scroll-mt-16 p-6">
+			<section
+				id="contact"
+				class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-16 p-6">
 				<h2
 					class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
 					Contact Us
